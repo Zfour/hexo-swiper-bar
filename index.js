@@ -54,7 +54,7 @@ hexo.extend.filter.register('after_generate',function() {
      </script>
 <script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script>
 <script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script>
-`;
+<style>${hexo.config.swiper.plus_style}</style>`;
         hexo.extend.injector.register('head_end',`<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css">`, "default");
         hexo.extend.injector.register('body_end',script_text, "default");
     }
