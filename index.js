@@ -42,7 +42,7 @@ hexo.extend.filter.register('after_generate',function() {
         new_posts_list = new_posts_list.reverse();
         for (item of new_posts_list){
             if(item.swiper_index && item.swiper_desc){
-                temple_html_item += `<div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="${item.swiper_cover|item.cover}" alt="${item.swiper_cover|item.cover}"/></div><div class="blog-slider__content"><span class="blog-slider__code">${item.date.format('YYYY-MM-DD')}</span><a class="blog-slider__title" href="${item.path}">${item.title}</a><div class="blog-slider__text">${item.swiper_desc}</div><a class="blog-slider__button" href="${item.path}">详情</a></div></div>`;
+                temple_html_item += `<div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="${item.swiper_cover||item.cover}" alt="${item.swiper_cover||item.cover}"/></div><div class="blog-slider__content"><span class="blog-slider__code">${item.date.format('YYYY-MM-DD')}</span><a class="blog-slider__title" href="${item.path}">${item.title}</a><div class="blog-slider__text">${item.swiper_desc}</div><a class="blog-slider__button" href="${item.path}">详情</a></div></div>`;
             }
         }
         var temple_html =`${temple[0]}<div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms">${temple_html_item}</div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div>${temple[1]}`;
